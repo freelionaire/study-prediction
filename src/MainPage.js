@@ -7,7 +7,7 @@ const MainPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #1e1e1e;
   color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
@@ -30,7 +30,7 @@ const FeedbackSection = styled.div`
   margin-top: 3rem;
   width: 80%;
   max-width: 800px;
-  text-align: left;
+  text-align: center;
 `;
 
 const FeedbackTitle = styled.h2`
@@ -48,6 +48,7 @@ const FeedbackItem = styled.li`
   margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 5px;
+  text-align: left;
 `;
 
 const StartButton = styled.button`
