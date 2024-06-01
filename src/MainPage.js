@@ -36,7 +36,7 @@ const Subtitle = styled.h2`
 `;
 
 const FeedbackSection = styled.div`
-  margin-top: 25rem; /* Space between sections */
+  margin-top: 20rem; /* Space between sections */
   width: 80%;
   max-width: 800px;
   text-align: left;
@@ -120,7 +120,7 @@ const MainPage = () => {
 
       {/* Feedback Section */}
       <FeedbackSection>
-        <FeedbackTitle>What our thousands of customers are saying</FeedbackTitle>
+        <FeedbackTitle>What students like you are saying...✨</FeedbackTitle>
         <FeedbackList>
           {feedbacks.map((feedback, index) => (
             <FeedbackItem key={index}>{feedback}</FeedbackItem>
