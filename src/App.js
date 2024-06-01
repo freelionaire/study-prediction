@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainPage from './MainPage';
 import Questionnaire from './Questionnaire';
 import ResultPage from './ResultPage';
-import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
         <Route path="/questionnaire" element={<Questionnaire />} />
         <Route path="/result" element={<ResultPage />} />
       </Routes>
-      <Analytics />
     </Router>
   );
 }

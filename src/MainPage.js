@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-import { Analytics } from "@vercel/analytics/react"
+
 
 const MainPageContainer = styled.div`
   display: flex;
