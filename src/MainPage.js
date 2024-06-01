@@ -8,7 +8,8 @@ const MainPageContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px;
-  padding-top: 20rem; /* Space above the main section */
+  padding-top: 15rem; /* Space above the main section */
+  padding-bottom: 15rem
   min-height: 100vh;
   background-color: #1e1e1e;
   color: #ffffff;
