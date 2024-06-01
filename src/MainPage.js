@@ -9,7 +9,6 @@ const MainPageContainer = styled.div`
   justify-content: center;
   padding: 20px;
   padding-top: 15rem; /* Space above the main section */
-  padding-bottom: 15rem;
   min-height: 100vh;
   background-color: #1e1e1e;
   color: #ffffff;
@@ -37,7 +36,7 @@ const Subtitle = styled.h2`
 `;
 
 const FeedbackSection = styled.div`
-  margin-top: 4rem; /* Space between sections */
+  margin-top: 40rem; /* Space between sections */
   width: 80%;
   max-width: 800px;
   text-align: left;
