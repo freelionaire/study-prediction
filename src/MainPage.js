@@ -71,6 +71,11 @@ const FeedbackItem = styled.li`
   padding: 1rem;
   border-radius: 5px;
   text-align: left;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5rem; /* Adjust margin for mobile devices to lift the title */
+  }
+
 `;
 
 const StartButton = styled.button`
