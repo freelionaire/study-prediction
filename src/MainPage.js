@@ -63,6 +63,11 @@ const FeedbackTitle = styled.h2`
 const FeedbackList = styled.ul`
   list-style-type: none;
   padding: 0;
+
+  @media (max-width: 768px) {
+    margin-bottom: 4rem; /* Adjust margin for mobile devices to lift the title */
+  }
+
 `;
 
 const FeedbackItem = styled.li`
@@ -73,7 +78,7 @@ const FeedbackItem = styled.li`
   text-align: left;
 
   @media (max-width: 768px) {
-    margin-bottom: 5rem; /* Adjust margin for mobile devices to lift the title */
+    margin-bottom: 0rem; /* Adjust margin for mobile devices to lift the title */
   }
 
 `;
