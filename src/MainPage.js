@@ -36,7 +36,7 @@ const Subtitle = styled.h2`
 `;
 
 const FeedbackSection = styled.div`
-  margin-top: 40rem; /* Space between sections */
+  margin-top: 30rem; /* Space between sections */
   width: 80%;
   max-width: 800px;
   text-align: left;
