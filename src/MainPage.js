@@ -45,7 +45,8 @@ const FeedbackSection = styled.div`
   text-align: left;
 
   @media (max-width: 768px) {
-    margin-bottom: 2rem; /* Adjust margin for mobile devices to lift the title */
+    margin-bottom: 1rem; /* Adjust margin for mobile devices to lift the title */
+    margin-top: 10;
   }
 
 
