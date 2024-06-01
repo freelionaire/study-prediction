@@ -44,6 +44,9 @@ const FeedbackSection = styled.div`
   max-width: 800px;
   text-align: left;
 
+  @media (max-width: 768px) {
+    margin-bottom: 2rem; /* Adjust margin for mobile devices to lift the title */
+  }
 
 
 `;
