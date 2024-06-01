@@ -44,9 +44,7 @@ const FeedbackSection = styled.div`
   max-width: 800px;
   text-align: left;
 
-  @media (max-width: 768px) {
-    margin-top: 12rem; /* Move subtitle up for mobile devices */
-  }
+
 
 `;
 
@@ -54,7 +52,13 @@ const FeedbackTitle = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 1rem;
   text-align: center;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5rem; /* Adjust margin for mobile devices to lift the title */
+  }
+
 `;
+
 
 const FeedbackList = styled.ul`
   list-style-type: none;
