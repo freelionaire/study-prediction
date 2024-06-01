@@ -57,13 +57,13 @@ const LoadingMessage = styled.div`
 const questions = [
   "What's your name?",
   "How many hours a day do you typically spend on social media?",
-  "If you could be any biotech tool, which one would you be and why?",
+  "If you could be any software, which one would you be and why? e.g. google",
   "How often do you check your phone while studying?",
-  "What is your favorite biotech innovation of the past decade?",
-  "On a scale of 1 to 10, how confident are you in understanding genomic processes?",
+  "What is your favorite science innovation of the past decade?",
+  "On a scale of 1 to 10, how confident are you in understanding lectures you take in class?",
   "What time of day do you feel most productive for studying?",
-  "How do you think we can improve the rate of secondary metabolites?",
-  "Do bacteria have brains?"
+  "How do you think we can improve education system of Pakistan?",
+  "Do elephants have brains?"
 ];
 
 const Questionnaire = () => {
