@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
 const MainPageContainer = styled.div`
+margin-top: 20rev;
   display: flex;
   flex-direction: column;
   align-items: center;
