@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-
 
 const MainPageContainer = styled.div`
   display: flex;
@@ -66,21 +65,29 @@ const StartButton = styled.button`
 
 const MainPage = () => {
   const navigate = useNavigate();
-  const [feedbacks, setFeedbacks] = useState([]);
 
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch('/api/getReviews');
-        const data = await response.json();
-        setFeedbacks(data);
-      } catch (error) {
-        console.error('Error fetching reviews:', error);
-      }
-    };
-
-    fetchReviews();
-  }, []);
+  const feedbacks = [
+    "Ali Khan: This tool changed my life! I finally know when to study.",
+    "Ayesha Ahmed: I can't believe how accurate this is. Highly recommended!",
+    "Bilal Hussain: Thanks to this tool, I can manage my study schedule better.",
+    "Fatima Javed: It's like magic! I know exactly when to hit the books.",
+    "Zainab Ali: A must-have for every student struggling with procrastination.",
+    "Mohammad Rizwan: This predictor is spot on. Helped me a lot!",
+    "Sara Sheikh: Amazing tool! My grades have improved thanks to this.",
+    "Usman Tariq: Never thought a tool could be this accurate. Kudos!",
+    "Mariam Arif: This has been a game-changer for my study routine.",
+    "Fahad Saeed: Spot-on predictions. Really helpful!",
+    "Hina Qureshi: Thanks to this, I am more organized with my studies.",
+    "Naveed Akhtar: Highly accurate and very useful for students.",
+    "Sadia Bashir: My go-to tool for planning my study schedule.",
+    "Ahmed Raza: Fantastic tool! Helped me overcome procrastination.",
+    "Rabia Khan: This tool is a lifesaver for last-minute crammers.",
+    "Haris Mehmood: I can't study without this tool anymore. So accurate!",
+    "Sana Malik: My grades are improving because of this. Thanks!",
+    "Tariq Jamil: Really impressed with the accuracy. A must-use!",
+    "Sabeen Zafar: Perfect for keeping my study schedule on track.",
+    "Imran Shah: This tool has made studying so much easier."
+  ];
 
   return (
     <MainPageContainer>
@@ -93,7 +100,7 @@ const MainPage = () => {
         <FeedbackTitle>What our thousands of customers are saying</FeedbackTitle>
         <FeedbackList>
           {feedbacks.map((feedback, index) => (
-            <FeedbackItem key={index}>{feedback.review}</FeedbackItem>
+            <FeedbackItem key={index}>{feedback}</FeedbackItem>
           ))}
         </FeedbackList>
       </FeedbackSection>
