@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react"
 
 const MainPageContainer = styled.div`
   display: flex;
@@ -83,7 +84,7 @@ const MainPage = () => {
 
   return (
     <MainPageContainer>
-      <Title>Procrastination Prediction Tool</Title>
+      <Title>When Will You Actually Study?</Title>
       <Subtitle>Our system uses a state-of-the-art patented system that can predict the exact date you will start studying.</Subtitle>
       <StartButton onClick={() => navigate('/questionnaire')}>
         Start
