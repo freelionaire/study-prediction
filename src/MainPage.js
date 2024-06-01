@@ -7,21 +7,11 @@ const MainPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px;
   min-height: 100vh;
   background-color: #1e1e1e;
   color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
-  padding: 20px;
-  box-sizing: border-box;
-`;
-
-const ContentWrapper = styled.div`
-  width: 100%;
-  max-width: 800px;
-  padding: 20px;
-  background-color: #1e1e1e;
-  border: 1px solid #444;
-  border-radius: 10px;
   box-sizing: border-box;
 `;
 
@@ -35,18 +25,21 @@ const Subtitle = styled.h2`
   font-size: 1.2rem;
   margin-bottom: 2rem;
   text-align: center;
-  max-width: 100%;
+  max-width: 80%;
+  line-height: 1.5;
 `;
 
 const FeedbackSection = styled.div`
-  margin-top: 3rem;
-  width: 100%;
-  text-align: center;
+  margin-top: 4rem;
+  width: 80%;
+  max-width: 800px;
+  text-align: left;
 `;
 
 const FeedbackTitle = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  text-align: center;
 `;
 
 const FeedbackList = styled.ul`
@@ -103,23 +96,22 @@ const MainPage = () => {
 
   return (
     <MainPageContainer>
-      <ContentWrapper>
-        <Title>When Will You Actually Study?</Title>
-        <Subtitle>Our system uses a state-of-the-art patented system that can predict the exact date you will start studying.</Subtitle>
-        <StartButton onClick={() => navigate('/questionnaire')}>
-          Start
-        </StartButton>
-        <FeedbackSection>
-          <FeedbackTitle>What our thousands of customers are saying</FeedbackTitle>
-          <FeedbackList>
-            {feedbacks.map((feedback, index) => (
-              <FeedbackItem key={index}>{feedback}</FeedbackItem>
-            ))}
-          </FeedbackList>
-        </FeedbackSection>
-      </ContentWrapper>
+      <Title>When Will You Actually Study?</Title>
+      <Subtitle>Our system uses a state-of-the-art patented system<br/>that can predict the exact date you will start studying.</Subtitle>
+      <StartButton onClick={() => navigate('/questionnaire')}>
+        Start
+      </StartButton>
+      <FeedbackSection>
+        <FeedbackTitle>What our thousands of customers are saying</FeedbackTitle>
+        <FeedbackList>
+          {feedbacks.map((feedback, index) => (
+            <FeedbackItem key={index}>{feedback}</FeedbackItem>
+          ))}
+        </FeedbackList>
+      </FeedbackSection>
     </MainPageContainer>
   );
 };
 
 export default MainPage;
+
