@@ -3,23 +3,28 @@ import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
 const MainPageContainer = styled.div`
-margin-top: 20rev;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  padding-top: 20rem; /* Space above the main section */
   min-height: 100vh;
   background-color: #1e1e1e;
   color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding-top: 10rem; /* Adjust padding for mobile devices */
+  }
 `;
 
 const Title = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
+  margin-top: 5rem; /* Space above the title */
 `;
 
 const Subtitle = styled.h2`
@@ -31,8 +36,7 @@ const Subtitle = styled.h2`
 `;
 
 const FeedbackSection = styled.div`
-  /* Adjust margin-top to control the space between sections */
-  margin-top: 20rem;
+  margin-top: 4rem; /* Space between sections */
   width: 80%;
   max-width: 800px;
   text-align: left;
@@ -68,6 +72,12 @@ const StartButton = styled.button`
   &:hover {
     background-color: #e64a19;
   }
+`;
+
+const Footer = styled.div`
+  margin-top: 4rem;
+  font-size: 1rem;
+  text-align: center;
 `;
 
 const MainPage = () => {
@@ -117,6 +127,9 @@ const MainPage = () => {
           ))}
         </FeedbackList>
       </FeedbackSection>
+
+      {/* Footer Section */}
+      <Footer>Made with ❤️ by Living Molecules</Footer>
     </MainPageContainer>
   );
 };
