@@ -34,9 +34,7 @@ const Subtitle = styled.h2`
   max-width: 80%;
   line-height: 1.5;
 
-  @media (max-width: 768px) {
-    margin-top: 12rem; /* Move subtitle up for mobile devices */
-  }
+
 
 `;
 
@@ -45,6 +43,11 @@ const FeedbackSection = styled.div`
   width: 80%;
   max-width: 800px;
   text-align: left;
+
+  @media (max-width: 768px) {
+    margin-top: 12rem; /* Move subtitle up for mobile devices */
+  }
+
 `;
 
 const FeedbackTitle = styled.h2`
