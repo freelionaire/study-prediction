@@ -30,6 +30,7 @@ const Subtitle = styled.h2`
 `;
 
 const FeedbackSection = styled.div`
+  /* Adjust margin-top to control the space between sections */
   margin-top: 4rem;
   width: 80%;
   max-width: 800px;
@@ -96,11 +97,17 @@ const MainPage = () => {
 
   return (
     <MainPageContainer>
+      {/* Main Section */}
       <Title>When Will You Actually Study?</Title>
-      <Subtitle>Our system uses a state-of-the-art patented system<br/>that can predict the exact date you will start studying.</Subtitle>
+      <Subtitle>
+        Our system uses a state-of-the-art patented system<br/>
+        that can predict the exact date you will start studying.
+      </Subtitle>
       <StartButton onClick={() => navigate('/questionnaire')}>
         Start
       </StartButton>
+
+      {/* Feedback Section */}
       <FeedbackSection>
         <FeedbackTitle>What our thousands of customers are saying</FeedbackTitle>
         <FeedbackList>
@@ -114,4 +121,3 @@ const MainPage = () => {
 };
 
 export default MainPage;
-
