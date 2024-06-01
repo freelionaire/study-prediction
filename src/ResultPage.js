@@ -63,7 +63,7 @@ const ResultPage = () => {
         <Message>
           <p>{userName}, if you spent as much time studying as you just did here, you'd already have one topic mastered.</p>
           <p>Your commitment to procrastination is truly impressive. Maybe start studying next year?</p>
-          <p>Seriously, {userName}? You think you’re going to magically understand genomic and industrial processes, you genius slacker? </p> 
+          <p>Seriously, {userName}? You think you’re going to magically understand whole of notes in one night, you genius slacker? </p> 
           <p>Absolutely not.</p>
           <p>You're not like your teachers – "na demagh na tension."</p>
         </Message>
