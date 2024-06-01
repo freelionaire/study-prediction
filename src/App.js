@@ -1,10 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import MainPage from './MainPage';
 import Questionnaire from './Questionnaire';
 import ResultPage from './ResultPage';
+import { initGA, logPageView } from './analytics';
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    initGA('G-EG9QV76K1H'); // Replace with your Tracking ID
+    logPageView();
+  }, []);
+
+  useEffect(() => {
+    logPageView();
+  }, [location]);
+
   return (
     <Router>
       <Routes>
