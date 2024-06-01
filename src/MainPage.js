@@ -11,6 +11,18 @@ const MainPageContainer = styled.div`
   background-color: #1e1e1e;
   color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  box-sizing: border-box;
+`;
+
+const ContentWrapper = styled.div`
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 10px;
+  box-sizing: border-box;
 `;
 
 const Title = styled.h1`
@@ -23,13 +35,12 @@ const Subtitle = styled.h2`
   font-size: 1.2rem;
   margin-bottom: 2rem;
   text-align: center;
-  max-width: 80%;
+  max-width: 100%;
 `;
 
 const FeedbackSection = styled.div`
   margin-top: 3rem;
-  width: 80%;
-  max-width: 800px;
+  width: 100%;
   text-align: center;
 `;
 
@@ -92,19 +103,21 @@ const MainPage = () => {
 
   return (
     <MainPageContainer>
-      <Title>When Will You Actually Study?</Title>
-      <Subtitle>Our system uses a state-of-the-art patented system that can predict the exact date you will start studying.</Subtitle>
-      <StartButton onClick={() => navigate('/questionnaire')}>
-        Start
-      </StartButton>
-      <FeedbackSection>
-        <FeedbackTitle>What our thousands of customers are saying</FeedbackTitle>
-        <FeedbackList>
-          {feedbacks.map((feedback, index) => (
-            <FeedbackItem key={index}>{feedback}</FeedbackItem>
-          ))}
-        </FeedbackList>
-      </FeedbackSection>
+      <ContentWrapper>
+        <Title>When Will You Actually Study?</Title>
+        <Subtitle>Our system uses a state-of-the-art patented system that can predict the exact date you will start studying.</Subtitle>
+        <StartButton onClick={() => navigate('/questionnaire')}>
+          Start
+        </StartButton>
+        <FeedbackSection>
+          <FeedbackTitle>What our thousands of customers are saying</FeedbackTitle>
+          <FeedbackList>
+            {feedbacks.map((feedback, index) => (
+              <FeedbackItem key={index}>{feedback}</FeedbackItem>
+            ))}
+          </FeedbackList>
+        </FeedbackSection>
+      </ContentWrapper>
     </MainPageContainer>
   );
 };
