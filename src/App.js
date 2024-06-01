@@ -6,7 +6,16 @@ import ResultPage from './ResultPage';
 import { initGA, logPageView } from './analytics';
 import GoogleTagManager from './GoogleTagManager';
 
-function App() {
+const App = () => {
+  return (
+    <Router>
+      <GoogleTagManager />
+      <AppContent />
+    </Router>
+  );
+};
+
+const AppContent = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -19,18 +28,12 @@ function App() {
   }, [location]);
 
   return (
-    <>
-      <GoogleTagManager />
-      <Router>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/questionnaire" element={<Questionnaire />} />
-          <Route path="/result" element={<ResultPage />} />
-        </Routes>
-      </Router>
-    </>
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/questionnaire" element={<Questionnaire />} />
+      <Route path="/result" element={<ResultPage />} />
+    </Routes>
   );
-}
+};
 
 export default App;
-
