@@ -77,9 +77,6 @@ const FeedbackItem = styled.li`
   border-radius: 5px;
   text-align: left;
 
-  @media (max-width: 768px) {
-    margin-bottom: 0rem; /* Adjust margin for mobile devices to lift the title */
-  }
 
 `;
 
