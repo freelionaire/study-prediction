@@ -1,7 +1,7 @@
 // pages/api/submitAnswers.js
 import { MongoClient } from 'mongodb';
 
-const uri = "mongodb+srv://bunny:bunny1@cluster0.mongodb.net/bunny?retryWrites=true&w=majority";
+const uri = "mongodb+srv://bunny:bunny1@cluster0.zmxclzz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 let client;
 
