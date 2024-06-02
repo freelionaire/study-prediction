@@ -62,7 +62,7 @@ const questions = [
   "What is your favorite science innovation of the past decade?",
   "On a scale of 1 to 10, how confident are you in understanding lectures you take in class?",
   "What time of day do you feel most productive for studying?",
-  "How do you think we can improve education system of Pakistan?",
+  "How do you think we can improve the education system of Pakistan?",
   "Do elephants have brains?"
 ];
 
@@ -79,13 +79,13 @@ const Questionnaire = () => {
     setAnswers(newAnswers);
   };
 
-  const handleNextClick = () => {
+  const handleNextClick = async () => {
     if (answers[currentQuestionIndex].trim() === "") {
       setError("This field is required.");
     } else {
       setError("");
       setLoading(true);
-      setTimeout(() => {
+      setTimeout(async () => {
         setLoading(false);
         if (currentQuestionIndex === 0) {
           localStorage.setItem("userName", answers[0]);
@@ -93,7 +93,23 @@ const Questionnaire = () => {
         if (currentQuestionIndex + 1 < questions.length) {
           setCurrentQuestionIndex(currentQuestionIndex + 1);
         } else {
-          navigate('/result');
+          const userName = answers[0];
+          try {
+            const response = await fetch('/api/submitAnswers', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ userName, answers }),
+            });
+            if (response.ok) {
+              navigate('/result');
+            } else {
+              setError('Failed to submit answers.');
+            }
+          } catch (err) {
+            setError('Failed to submit answers.');
+          }
         }
       }, 1000);
     }
