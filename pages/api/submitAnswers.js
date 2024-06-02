@@ -10,7 +10,7 @@ async function connectToDatabase() {
         client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
         await client.connect();
     }
-    return client.db('<dbname>');
+    return client.db('bunny');
 }
 
 export default async function handler(req, res) {
